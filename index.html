@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chán học bạn làm gì</title>
+    <meta charset="utf-8" />
+    <!--CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/font/fontawesome-all.css" rel="stylesheet" />
+    <link href="js/Owl2/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/getData.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="wrp">
+            <a class="logo" href="/" title="">
+                <img src="./pic/logo.png" alt="" loading="lazy">
+            </a>
+            <div id="menu">
+                <ul>
+                    <li class="active">
+                        <a href="" title="">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="" title="">Giới thiệu</a>
+                        <ul>
+                            <li>
+                                <a href="" title="">Về chúng tôi</a>
+                                <ul>
+                                    <li>
+                                        <a href="" title="">Về chúng tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Đội ngũ luật sư</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Chính sách bảo mật</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" title="">Đội ngũ luật sư</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Chính sách bảo mật</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" title="">Dịch vụ luật sư</a>
+                    </li>
+                    <li>
+                        <a href="" title="">Hỏi đáp pháp luật</a>
+                    </li>
+                    <li>
+                        <a href="" title="">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="slide">
+        <div class="group">
+        </div>
+    </div>
+    <div id="container">
+        <div class="wrp">
+            <div class="colLeft">
+                <div id="lstQA">
+                    <p class="cmtitle">
+                        <i class="fal fa-question-circle"></i> Hỏi đáp
+                    </p>
+                    <div class="group">
+
+                    </div>
+                </div>
+            </div>
+            <div class="colRight">
+                <div class="homeService">
+                    <p class="cmtitle">
+                        <i class="fal fa-newspaper"></i> Bài viết
+                    </p>
+                    <div class="left">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrp">
+            <div id="gallery">
+                <p class="cmtitle">
+                    <i class="far fa-images"></i> Thư viện ảnh
+                </p>
+                <div class="group">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="wrp">
+            <div class="flex">
+                <div class="left">
+                    <a href="/" title="Logo" class="logoFoot" target="_self">
+                        <img src="./pic/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="right">
+                    <ul class="menuFoot">
+                        <li><a href="/" title="">Trang chủ</a></li>
+                        <li>
+                            <a href="/pages/lien-he.html" title="Liên hệ">
+                                Liên hệ </a>
+                        </li>
+                        <li>
+                            <a href="/pages/lien-he.html?gopy=1" title="Góp ý">
+                                Góp ý </a>
+                        </li>
+                        <li>
+                            <a href="/pages/so-do-cong.html" title="Sơ đồ cổng">
+                                Sơ đồ cổng </a>
+                        </li>
+                    </ul>
+                    <div class="cb"></div>
+                    <div class="content">
+                        <p><strong>CHÁN HỌC BẠN LÀM GÌ</strong><br>
+                            Giấy phép số 08/GP-TTĐT do Sở Thông tin và Truyền thông tỉnh Kon Tum&nbsp;cấp ngày
+                            20/12/2019<br>
+                            Quản lý kỹ thuật: Trung tâm Phục vụ hành chính công&nbsp;tỉnh Kon Tum, số 70&nbsp;Lê Hồng
+                            Phong, phường Quyết Thắng, thành phố&nbsp;Kon Tum, tỉnh Kon Tum.<br>
+                            Chịu trách nhiệm chính: Ông Nguyễn Đăng Trình&nbsp;- Phó Chánh Văn phòng Phụ trách Văn phòng
+                            UBND tỉnh.<br>
+                            Điện thoại hỗ trợ: ; Email: <strong>bbtcongttdt@kontum.gov.vn</strong></p>
+                    </div>
+                </div>
+                <div class="cb"></div>
+            </div>
+        </div>
+    </div>
+    <!--JS-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/Owl2/owl.carousel.min.js"></script>
+    <script>
+        if (dataNews && dataNews.length > 0) {
+            for (var i = 0; i < dataNews.length; i++) {
+                $(".homeService .left").append(`
+                <div class="item">
+                    <div class="wImage">
+                        <a href="/Detail.html?Id=${dataNews[i].Id}" title="" class="image cover">
+                            <img src="${dataNews[i].Image}"
+                                loading="lazy" alt="${dataNews[i].Title}">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h3 class="name">
+                            <a href="/Detail.html?Id=${dataNews[i].Id}" title="${dataNews[i].Title}">
+                                ${dataNews[i].Title}
+                            </a>
+                        </h3>
+                        <div class="cont">
+                            ${dataNews[i].Description}
+                        </div>
+                    </div>
+                </div>`)
+            }
+        }
+        if (dataQA && dataQA.length > 0) {
+            for (var i = 0; i < dataQA.length; i++) {
+                $("#lstQA .group").append(`
+                <div class="item ${i === 0 ? "ac" : ""}">
+                    <p class="ques">
+                        <span class="icon">
+                            <i class="fal fa-question"></i>
+                        </span>
+                        <span class="text">
+                            ${dataQA[i].Question}
+                        </span>
+                        <span class="toggle">
+                            <i class="far fa-chevron-down"></i>
+                        </span>
+                    </p>
+                    <div class="ans">
+                        <p class="ttu fwb">Trả lời:</p>
+                        ${dataQA[i].Answer}
+                    </div>
+                </div>`)
+            }
+        }
+        if (gallery && gallery.length > 0) {
+            for (var i = 0; i < gallery.length; i++) {
+                $("#gallery .group").append(`
+                <div class="wImage">
+                        <a href="" title="${gallery[i].Title}" class="image cover">
+                            <img src="${gallery[i].Url}"
+                                loading="lazy" alt="${gallery[i].Title}">
+                        </a>
+                    </div>
+               `)
+            }
+        }
+        if (slide && slide.length > 0) {
+            for (var i = 0; i < slide.length; i++) {
+                $("#slide .group").append(`
+                <div class="wImage">
+                        <a href="" title="${slide[i].Title}" class="image cover">
+                            <img src="${slide[i].Url}"
+                                loading="lazy" alt="${slide[i].Title}">
+                        </a>
+                    </div>
+               `)
+            }
+        }
+    </script>
+    <script src="js/Common.js"></script>
+</body>
+
+</html>

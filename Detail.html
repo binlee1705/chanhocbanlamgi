@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chán học bạn làm gì</title>
+    <meta charset="utf-8" />
+    <!--CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/font/fontawesome-all.css" rel="stylesheet" />
+    <link href="js/Owl2/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/getData.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="wrp">
+            <a class="logo" href="/" title="">
+                <img src="./pic/logo.png" alt="" loading="lazy">
+            </a>
+            <div id="menu">
+                <ul>
+                    <li class="active">
+                        <a href="" title="">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="" title="">Giới thiệu</a>
+                        <ul>
+                            <li>
+                                <a href="" title="">Về chúng tôi</a>
+                                <ul>
+                                    <li>
+                                        <a href="" title="">Về chúng tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Đội ngũ luật sư</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Chính sách bảo mật</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" title="">Đội ngũ luật sư</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Chính sách bảo mật</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" title="">Dịch vụ luật sư</a>
+                    </li>
+                    <li>
+                        <a href="" title="">Hỏi đáp pháp luật</a>
+                    </li>
+                    <li>
+                        <a href="" title="">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="slide">
+        <div class="group">
+            <div class="wImage">
+                <a href="" title="" class="image cover">
+                    <img src="https://static2.yan.vn/YanNews/2167221/201801/20180109-010716-loikhuyensaunhunggiohoctapueoai.jpg"
+                        loading="lazy" alt="">
+                </a>
+            </div>
+            <div class="wImage">
+                <a href="" title="" class="image cover">
+                    <img src="https://i.ytimg.com/vi/RWLyaTpw1VY/maxresdefault.jpg" loading="lazy" alt="">
+                </a>
+            </div>
+            <div class="wImage">
+                <a href="" title="" class="image cover">
+                    <img src="http://www.anhngu.usc.edu.vn/Data/Sites/1/News/4306/190731_chanta2.jpg" loading="lazy"
+                        alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="news" class="detail">
+            <div class="wrp">
+                <div class="colLeft">
+                    <div class="print">
+                        <h1 class="cmtitle" title="">
+                            <span>Tự tin hội nhập bằng bản lĩnh văn hóa dân tộc kết tinh từ các giá trị phù hợp với thời
+                                đại</span>
+                        </h1>
+                        <div class="thongke">
+                            <div class="lstLeft">
+                                <span>
+                                    <i class="fal fa-calendar-alt"></i>
+                                    <span class="thongke-text">Ngày đăng:</span>
+                                    <span id="createdDate"></span>
+                                </span>
+                            </div>
+                            <div class="cochu">
+                                <span onclick="Resetnoidung()">Mặc định</span>
+                                <span class="thongke-text">Cỡ chữ</span>
+                                <a href="javascript:Decreasenoidung()" title="" class="SmallSize btnSize">
+                                    <i class="far fa-minus"></i>
+                                </a>
+                                <a class="LargeSize btnSize" href="javascript:Increasenoidung()" title="">
+                                    <i class="far fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="noidung" id="readContent">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="colRight">
+                    <div class="newsOther">
+                        <p class="title">
+                            Bài viết nổi bật
+                        </p>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="wrp">
+            <div class="flex">
+                <div class="left">
+                    <a href="/" title="Logo" class="logoFoot" target="_self">
+                        <img src="./pic/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="right">
+                    <ul class="menuFoot">
+                        <li><a href="/" title="">Trang chủ</a></li>
+                        <li>
+                            <a href="/pages/lien-he.html" title="Liên hệ">
+                                Liên hệ </a>
+                        </li>
+                        <li>
+                            <a href="/pages/lien-he.html?gopy=1" title="Góp ý">
+                                Góp ý </a>
+                        </li>
+                        <li>
+                            <a href="/pages/so-do-cong.html" title="Sơ đồ cổng">
+                                Sơ đồ cổng </a>
+                        </li>
+                    </ul>
+                    <div class="cb"></div>
+                    <div class="content">
+                        <p><strong>CHÁN HỌC BẠN LÀM GÌ</strong><br>
+                            Giấy phép số 08/GP-TTĐT do Sở Thông tin và Truyền thông tỉnh Kon Tum&nbsp;cấp ngày
+                            20/12/2019<br>
+                            Quản lý kỹ thuật: Trung tâm Phục vụ hành chính công&nbsp;tỉnh Kon Tum, số 70&nbsp;Lê Hồng
+                            Phong, phường Quyết Thắng, thành phố&nbsp;Kon Tum, tỉnh Kon Tum.<br>
+                            Chịu trách nhiệm chính: Ông Nguyễn Đăng Trình&nbsp;- Phó Chánh Văn phòng Phụ trách Văn phòng
+                            UBND tỉnh.<br>
+                            Điện thoại hỗ trợ: ; Email: <strong>bbtcongttdt@kontum.gov.vn</strong></p>
+                    </div>
+                </div>
+                <div class="cb"></div>
+            </div>
+        </div>
+    </div>
+    <!--JS-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/Owl2/owl.carousel.min.js"></script>
+    <script>
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var Id = parseInt(urlParams.get('Id'))
+        var obj = dataNews.find(g => g.Id === Id);
+        if (obj) {
+            $("#news.detail .cmtitle span").text(obj.Title)
+            $("#news.detail .noidung").html(obj.Content)
+            $("#createdDate").text(obj.CreatedDate)
+        }
+
+        if (dataNews && dataNews.length > 0) {
+            var newsRandom = dataNews.filter(g => g.Id !== Id).slice(0, 5);
+            var newsRandomTake = shuffle(newsRandom);
+            for (var i = 0; i < newsRandomTake.length; i++) {
+                $(".newsOther ul").append(`
+                <li><a href="/Detail.html?Id=${newsRandomTake[i].Id}" title=${newsRandomTake[i].Title}">${newsRandomTake[i].Title}</a></li>`)
+            }
+        }
+        function shuffle(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex != 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }
+
+    </script>
+    <script src="js/Common.js"></script>
+</body>
+
+</html>
