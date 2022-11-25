@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -26,10 +26,10 @@
             </a>
             <div id="menu">
                 <ul>
-                    <li class="active">
+                    <li>
                         <a href="/" title="Trang chủ">Trang chủ</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/question.html" title="">Hỏi đáp</a>
                     </li>
                 </ul>
@@ -44,31 +44,11 @@
         <div id="news" class="detail">
             <div class="wrp">
                 <div class="colLeft">
-                    <div class="print">
-                        <h1 class="cmtitle" title="">
-                            <span>Tự tin hội nhập bằng bản lĩnh văn hóa dân tộc kết tinh từ các giá trị phù hợp với thời
-                                đại</span>
-                        </h1>
-                        <div class="thongke">
-                            <div class="lstLeft">
-                                <span>
-                                    <i class="fal fa-calendar-alt"></i>
-                                    <span class="thongke-text">Ngày đăng:</span>
-                                    <span id="createdDate"></span>
-                                </span>
-                            </div>
-                            <div class="cochu">
-                                <span onclick="Resetnoidung()">Mặc định</span>
-                                <span class="thongke-text">Cỡ chữ</span>
-                                <a href="javascript:Decreasenoidung()" title="" class="SmallSize btnSize">
-                                    <i class="far fa-minus"></i>
-                                </a>
-                                <a class="LargeSize btnSize" href="javascript:Increasenoidung()" title="">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="noidung" id="readContent">
+                    <div id="lstQA">
+                        <p class="cmtitle">
+                            <i class="fal fa-question-circle"></i> Hỏi đáp
+                        </p>
+                        <div class="group">
 
                         </div>
                     </div>
@@ -113,19 +93,8 @@
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/Owl2/owl.carousel.min.js"></script>
     <script>
-        var queryString = window.location.search;
-        var urlParams = new URLSearchParams(queryString);
-        var Id = parseInt(urlParams.get('Id'))
-        var obj = dataNews.find(g => g.Id === Id);
-        if (obj) {
-            $("#news.detail .cmtitle span").text(obj.Title)
-            $("#news.detail .noidung").html(obj.Content)
-            $("#createdDate").text(obj.CreatedDate)
-        }
-
         if (dataNews && dataNews.length > 0) {
-            var newsRandom = dataNews.filter(g => g.Id !== Id);
-            var newsRandomTake = shuffle(newsRandom).slice(0, 5);
+            var newsRandomTake = shuffle(dataNews).slice(0, 5);
             for (var i = 0; i < newsRandomTake.length; i++) {
                 $(".newsOther ul").append(`
                 <li><a href="/Detail.html?Id=${newsRandomTake[i].Id}" title=${newsRandomTake[i].Title}">${newsRandomTake[i].Title}</a></li>`)
@@ -141,6 +110,28 @@
                         </a>
                     </div>
                `)
+            }
+        }
+        if (dataQA && dataQA.length > 0) {
+            for (var i = 0; i < dataQA.length; i++) {
+                $("#lstQA .group").append(`
+                <div class="item ${i === 0 ? "ac" : ""}">
+                    <p class="ques">
+                        <span class="icon">
+                            <i class="fal fa-question"></i>
+                        </span>
+                        <span class="text">
+                            ${dataQA[i].Question}
+                        </span>
+                        <span class="toggle">
+                            <i class="far fa-chevron-down"></i>
+                        </span>
+                    </p>
+                    <div class="ans">
+                        <p class="ttu fwb">Trả lời:</p>
+                        ${dataQA[i].Answer}
+                    </div>
+                </div>`)
             }
         }
         function shuffle(array) {

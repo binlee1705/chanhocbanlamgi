@@ -14,6 +14,7 @@
     <link href="css/animate.min.css" rel="stylesheet" />
     <link href="css/font/fontawesome-all.css" rel="stylesheet" />
     <link href="js/Owl2/owl.carousel.min.css" rel="stylesheet" />
+    <link href="js/Lightbox/lightbox.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <script src="js/getData.js"></script>
 </head>
@@ -27,41 +28,10 @@
             <div id="menu">
                 <ul>
                     <li class="active">
-                        <a href="" title="">Trang chủ</a>
+                        <a href="/" title="Trang chủ">Trang chủ</a>
                     </li>
                     <li>
-                        <a href="" title="">Giới thiệu</a>
-                        <ul>
-                            <li>
-                                <a href="" title="">Về chúng tôi</a>
-                                <ul>
-                                    <li>
-                                        <a href="" title="">Về chúng tôi</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Đội ngũ luật sư</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Chính sách bảo mật</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="">Đội ngũ luật sư</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Chính sách bảo mật</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="" title="">Dịch vụ luật sư</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Hỏi đáp pháp luật</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Liên hệ</a>
+                        <a href="/question.html" title="">Hỏi đáp</a>
                     </li>
                 </ul>
             </div>
@@ -112,22 +82,6 @@
                     </a>
                 </div>
                 <div class="right">
-                    <ul class="menuFoot">
-                        <li><a href="/" title="">Trang chủ</a></li>
-                        <li>
-                            <a href="/pages/lien-he.html" title="Liên hệ">
-                                Liên hệ </a>
-                        </li>
-                        <li>
-                            <a href="/pages/lien-he.html?gopy=1" title="Góp ý">
-                                Góp ý </a>
-                        </li>
-                        <li>
-                            <a href="/pages/so-do-cong.html" title="Sơ đồ cổng">
-                                Sơ đồ cổng </a>
-                        </li>
-                    </ul>
-                    <div class="cb"></div>
                     <div class="content">
                         <p><strong>CHÁN HỌC BẠN LÀM GÌ</strong><br>
                             Giấy phép số 08/GP-TTĐT do Sở Thông tin và Truyền thông tỉnh Kon Tum&nbsp;cấp ngày
@@ -146,6 +100,7 @@
     <!--JS-->
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/Owl2/owl.carousel.min.js"></script>
+    <script src="js/Lightbox/lightbox.js"></script>
     <script>
         if (dataNews && dataNews.length > 0) {
             for (var i = 0; i < dataNews.length; i++) {
@@ -196,7 +151,7 @@
             for (var i = 0; i < gallery.length; i++) {
                 $("#gallery .group").append(`
                 <div class="wImage">
-                        <a href="" title="${gallery[i].Title}" class="image cover">
+                        <a href="${gallery[i].Url}" title="${gallery[i].Title}" class="image cover" data-lightbox="gallery">
                             <img src="${gallery[i].Url}"
                                 loading="lazy" alt="${gallery[i].Title}">
                         </a>
