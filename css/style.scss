@@ -191,6 +191,19 @@ img {
       }
     }
   }
+  &.list {
+    width: 100%;
+    .left {
+      padding: 0;
+      background: transparent;
+      flex-direction: row;
+      gap: 25px 80px;
+      flex-wrap: wrap;
+      .item {
+        width: calc(50% - 40px);
+      }
+    }
+  }
 }
 
 #container {
